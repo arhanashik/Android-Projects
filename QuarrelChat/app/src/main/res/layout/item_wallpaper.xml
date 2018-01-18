@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="190dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="2dp">
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="190dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:id="@+id/container">
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="190dp"
+            android:layout_alignParentRight="true"
+            android:foreground="@color/text_navy_transparent_50"
+            android:id="@+id/wallpaper_container">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/dragonfly"
+                android:scaleType="centerInside"
+                android:id="@+id/img_wallpaper"/>
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_seen_bg_24dp"
+            android:tint="@color/white"
+            android:scaleType="centerInside"
+            android:id="@+id/wallpaper_selected"/>
+    </RelativeLayout>
+</LinearLayout>

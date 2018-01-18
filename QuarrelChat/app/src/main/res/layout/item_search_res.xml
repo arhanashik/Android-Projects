@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/icon_container"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/icon_front"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fillAfter="true"
+            android:fillEnabled="true">
+
+            <ImageView
+                android:id="@+id/imageViewItemProfilePic"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:background="@drawable/shape_oval_bg"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:visibility="gone">
+
+            </ImageView>
+
+            <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+                android:id="@+id/icon_text"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:background="@drawable/shape_oval_bg"
+                android:textColor="@color/white"
+                android:text="A"
+                android:textSize="26sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:orientation="vertical"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/container">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Name"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:paddingLeft="5dp"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/textViewItemName"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toLeftOf="@+id/btnChat"
+                app:srcCompat="@drawable/ic_add_soulmate_black_24dp"
+                android:tint="@color/background_color"
+                android:padding="3dp"
+                android:id="@+id/btnSendSoulRequest"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/btnBlock"
+                app:srcCompat="@drawable/ic_chat_black_24dp"
+                android:tint="@color/background_color"
+                android:padding="3dp"
+                android:id="@+id/btnChat"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/btnInfo"
+                app:srcCompat="@drawable/ic_block_black_24dp"
+                android:tint="@color/background_color"
+                android:padding="3dp"
+                android:id="@+id/btnBlock"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/ic_warning_black_24dp"
+                android:tint="@color/background_color"
+                android:padding="3dp"
+                android:id="@+id/btnInfo"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

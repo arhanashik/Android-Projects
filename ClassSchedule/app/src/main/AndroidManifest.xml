@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.blackspider.classschedule">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- android:name=".Receiver.ConnectivityController" -->
+    <application
+        android:name=".App.ConnectivityController"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_class_schedule2"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- [START fcm_default_icon] -->
+        <!--
+             Set custom default icon. This is used when no icon is set for incoming notification messages.
+             See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/icon_class_schedule2" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <!-- [END fcm_default_icon] -->
+
+        <receiver android:name=".FCM.MyBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.project.blackspider.classschedule.CHAT_INTENT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Connectivity receiver -->
+        <receiver android:name=".Receiver.ConnectivityReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activities.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.blackspider.classschedule.Activities.MainActivity" />
+        </activity>
+
+        <service android:name=".FCM.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".FCM.MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Activities.SingleChatActivity"
+            android:label="@string/title_activity_single_chat"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.blackspider.classschedule.Activities.SettingsActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.AvaterSelectionActivity"
+            android:label="@string/title_activity_avater_selection"
+            android:parentActivityName=".Activities.SignUpActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.blackspider.classschedule.Activities.SignUpActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.ProfileSettingsActivity"
+            android:label="@string/title_activity_profile_settings"
+            android:parentActivityName=".Activities.SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.blackspider.classschedule.Activities.SettingsActivity" />
+        </activity>
+        <activity
+            android:name=".Teacher.TeacherMainActivity"
+            android:label="@string/title_activity_teacher_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Teacher.TeacherSignUpActivity"
+            android:label="@string/title_activity_teacher_sign_up"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider"
+            android:exported="true" />
+
+        <activity
+            android:name=".Activities.SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:parentActivityName=".Activities.WelcomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.blackspider.classschedule.Activities.WelcomeActivity" />
+        </activity>
+        <activity android:name=".Activities.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.NoticeBoardActivity"
+            android:label="Notice Board"
+            android:parentActivityName=".Activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.blackspider.classschedule.Activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Teacher.TeacherChatActivity"
+            android:label="@string/title_activity_teacher_chat"
+            android:parentActivityName=".Teacher.TeacherMainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.blackspider.classschedule.Teacher.TeacherMainActivity" />
+        </activity>
+    </application>
+
+</manifest>

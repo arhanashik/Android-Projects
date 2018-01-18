@@ -1,0 +1,17 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.project.blackspider.musician.view.CustomRecycler.IndexFastScrollRecyclerView
+        android:id="@+id/tracks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp"
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_audio"
+        android:background="@color/transparent_100"/>
+
+</FrameLayout>

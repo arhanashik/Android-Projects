@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/linearLayout1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:background="@color/colorPrimary"
+            android:padding="8dp"
+            android:id="@+id/nameTextView"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Message"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:background="@color/colorAccent"
+            android:padding="10dp"
+            android:id="@+id/messageTextView"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/closeButton"/>
+
+</LinearLayout>

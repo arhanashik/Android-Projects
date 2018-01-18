@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:padding="2dp"
+    android:background="@drawable/shape_rectangle_dashed_border">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:id="@+id/container">
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="190dp"
+            android:id="@+id/img_container">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_signle_bird"
+                android:visibility="visible"
+                android:id="@+id/img_profile_pic"/>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_container"
+            android:layout_above="@+id/btn_container"
+            android:gravity="left|center"
+            android:id="@+id/info_container">
+
+            <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Name"
+                android:textColor="@color/background_color"
+                android:textSize="19sp"
+                android:id="@+id/tv_name"/>
+
+            <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Status: "
+                android:textColor="@color/text_gray_darkest"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:layout_below="@+id/tv_name"
+                android:id="@+id/tv_status"/>
+
+            <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Message sent: 0\nMessage received: 0"
+                android:textColor="@color/text_gray_darkest"
+                android:textSize="14sp"
+                android:layout_below="@+id/tv_status"
+                android:id="@+id/tv_msg_count"/>
+
+            <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Last message: hhjkksdbdsbb dhdfgf h"
+                android:textColor="@color/text_gray_darkest"
+                android:textSize="13sp"
+                android:layout_below="@+id/tv_msg_count"
+                android:id="@+id/tv_last_msg"/>
+
+            <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Last chat on: 0.0"
+                android:textColor="@color/text_gray_darkest"
+                android:textSize="13sp"
+                android:layout_below="@+id/tv_last_msg"
+                android:id="@+id/tv_timestamp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/img_container"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:background="@color/background_color"
+            android:id="@+id/btn_container">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                app:srcCompat="@drawable/ic_chat_black_24dp"
+                android:tint="@color/background_white"
+                android:id="@+id/img_chat"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                app:srcCompat="@drawable/ic_call_black_24dp"
+                android:tint="@color/background_white"
+                android:id="@+id/img_call"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                app:srcCompat="@drawable/ic_account_circle_black_24dp"
+                android:tint="@color/background_white"
+                android:id="@+id/img_account"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

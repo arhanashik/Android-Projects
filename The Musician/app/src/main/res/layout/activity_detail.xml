@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.project.blackspider.musician.view.InsetsPercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:seekarc="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="false"
+    android:background="@drawable/bg">
+
+    <com.andremion.music.MusicCoverView
+        android:id="@+id/cover"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_cover"
+        android:transitionName="@string/transition_name_cover"
+        app:layout_heightPercent="35%"
+        app:shape="circle" />
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/area_track_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:layout_marginTopPercent="10%"/>
+
+    <ImageView
+        android:id="@+id/headset"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/title"
+        android:scaleType="centerInside"
+        android:background="@color/transparent_100"
+        android:src="@drawable/ic_headset_white_24dp"/>
+
+    <ImageView
+        android:id="@+id/share"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/title"
+        android:scaleType="centerInside"
+        android:background="@color/transparent_100"
+        android:src="@drawable/ic_share_white_24dp"/>
+
+    <com.project.blackspider.musician.view.ProgressView
+        android:id="@+id/progress"
+        android:layout_centerInParent="true"
+        android:transitionName="@string/transition_name_progress"
+        app:layout_aspectRatio="100%"
+        app:layout_heightPercent="40%"
+        android:visibility="visible"/>
+
+    <com.project.blackspider.musician.view.SeekArc
+        android:id="@+id/progress_changer"
+        android:layout_centerInParent="true"
+        app:layout_aspectRatio="100%"
+        app:layout_heightPercent="50%"
+        android:padding="60dp"
+        seekarc:arcColor="@color/dark_red"
+        seekarc:max="100"
+        seekarc:progressColor="@color/red"
+        seekarc:sweepAngle="272"
+        seekarc:rotation="180"
+        seekarc:startAngle="44"
+        seekarc:thumb="@drawable/custom_seek_arc_control_selector"
+        seekarc:touchInside="true"
+        seekarc:touchOutside="false"
+        android:visibility="gone"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:onClick="onFabClick"
+        android:scaleType="center"
+        android:src="@drawable/ic_pause_animatable"
+        android:transitionName="@string/transition_name_fab"/>
+
+    <Space
+        android:id="@+id/timers_anchor"
+        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_below="@id/cover"
+        android:layout_centerHorizontal="true"
+        app:layout_widthPercent="25%"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/timers_anchor"
+        android:layout_toStartOf="@id/timers_anchor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@android:color/white"
+        android:transitionName="@string/transition_name_time"
+        tools:text="00:00" />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/timers_anchor"
+        android:layout_toEndOf="@id/timers_anchor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@android:color/white"
+        android:transitionName="@string/transition_name_duration"
+        tools:text="00:00"/>
+
+    <LinearLayout
+        android:id="@+id/ordering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time"
+        android:layout_centerHorizontal="true"
+        android:transitionGroup="true">
+
+        <ImageView
+            android:id="@+id/repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:src="@drawable/ic_repeat_white_24dp"/>
+
+        <Space
+            android:layout_width="@dimen/activity_horizontal_margin"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/shuffle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:src="@drawable/ic_shuffle_white_24dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:transitionGroup="true"
+        app:layout_marginBottomPercent="5%">
+
+        <ImageView
+            android:id="@+id/add_to_playlist"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_playlist_add_white_24dp"
+            android:tint="#fff"/>
+
+        <ImageView
+            android:id="@+id/previous"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_skip_previous_white_24dp"/>
+
+        <ImageView
+            android:id="@+id/rewind"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fast_rewind_white_24dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/forward"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fast_forward_white_24dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/next"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_skip_next_white_24dp"/>
+
+        <ImageView
+            android:id="@+id/favourite"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_favourite_gap_24dp"
+            android:tint="#fff"/>
+
+    </LinearLayout>
+
+</com.project.blackspider.musician.view.InsetsPercentRelativeLayout>

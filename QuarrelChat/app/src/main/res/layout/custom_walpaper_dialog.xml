@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.codetail.widget.RevealFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/dialog">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/wallpaper_container">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/wallpaper_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="true"
+                android:scrollbars="none"
+                android:layout_gravity="bottom"
+                android:background="@android:color/transparent"
+                android:visibility="visible"/>
+        </android.support.design.widget.CoordinatorLayout>
+    </RelativeLayout>
+</io.codetail.widget.RevealFrameLayout>

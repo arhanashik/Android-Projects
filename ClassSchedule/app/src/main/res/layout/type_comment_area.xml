@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00ffffff"
+    android:gravity="bottom"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:paddingLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="-8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/rounded_corner1"
+        android:gravity="left|center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_emo_btn3"
+            android:id="@+id/imageViewEmojIconKeyboard"/>
+
+        <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:padding="5dp"
+            android:background="@android:color/transparent"
+            android:hint="Write your comment"
+            android:textSize="14sp"
+            android:id="@+id/editTextComment"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/icon_send"
+        android:id="@+id/imageViewSaveComment"/>
+
+
+</LinearLayout>

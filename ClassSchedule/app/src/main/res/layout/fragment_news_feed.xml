@@ -1,0 +1,123 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:activity="com.project.blackspider.classschedule.Fragments.AllNewsFeedPostsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No posts yet"
+        android:id="@+id/textViewNoPost"/>
+
+    <RelativeLayout
+        android:id="@+id/icon_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/icon_front"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillAfter="true"
+            android:fillEnabled="true">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listViewAllPosts"
+                android:divider="#ffffff"
+                android:dividerHeight="0dp"
+                android:descendantFocusability="afterDescendants"
+                android:visibility="gone">
+
+
+            </ListView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/icon_selected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fillAfter="false"
+            android:fillEnabled="false"
+            android:visibility="visible">
+
+            <LinearLayout android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentTop="false"
+                android:background="#eee"
+                android:content="@+id/content"
+                android:gravity="bottom|left"
+                android:orientation="vertical"
+                android:paddingLeft="40dp"
+                android:visibility="visible">
+
+                <LinearLayout android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_height="30dp"
+                        android:layout_width="30dp"
+                        android:background="@drawable/edit"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Edit"
+                        android:textSize="20sp"
+                        android:gravity="left"
+                        android:textColor="#222"
+                        android:padding="20dp"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_height="30dp"
+                        android:layout_width="30dp"
+                        android:background="@drawable/delete"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Delete"
+                        android:textSize="20sp"
+                        android:gravity="left"
+                        android:textColor="#222"
+                        android:padding="20dp"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/hide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_height="30dp"
+                        android:layout_width="30dp"
+                        android:background="@drawable/hide"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hide"
+                        android:textSize="20sp"
+                        android:gravity="left"
+                        android:textColor="#222"
+                        android:padding="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

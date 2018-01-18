@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.codetail.widget.RevealFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@color/background_color"
+        android:id="@+id/dialog">
+
+        <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Select option"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textColor="@color/text_white"
+            android:gravity="left"
+            android:id="@+id/title"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/title"
+            android:id="@+id/body">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:id="@+id/imageButtonCamera"/>
+
+                <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:paddingLeft="5dp"
+                    android:id="@+id/textViewCameraTitle"
+                    android:text="Camera"
+                    android:textSize="20dp"
+                    android:textColor="@color/text_white"
+                    android:gravity="center|left"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:id="@+id/imageButtonGallery"/>
+
+                <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:paddingLeft="5dp"
+                    android:id="@+id/textViewGalleryTitle"
+                    android:text="Gallery"
+                    android:textSize="20dp"
+                    android:textColor="@color/text_white"
+                    android:gravity="center|left"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@android:drawable/btn_star"
+                    android:id="@+id/imageButtonAvater"/>
+
+                <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:paddingLeft="5dp"
+                    android:id="@+id/textViewAvaterTitle"
+                    android:text="Avater"
+                    android:textSize="20dp"
+                    android:textColor="@color/text_white"
+                    android:gravity="center|left"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="15dp"
+            android:text="CANCEL"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/body"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/text_white"
+            android:gravity="left"
+            android:id="@+id/tv_cancel_dialog"/>
+    </RelativeLayout>
+
+</io.codetail.widget.RevealFrameLayout>

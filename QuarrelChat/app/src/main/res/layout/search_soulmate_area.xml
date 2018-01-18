@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_white"
+    android:paddingTop="10dp"
+    android:gravity="bottom"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rectangle_dashed_border">
+
+        <EditText
+            android:id="@+id/search_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btn_search"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:background="@android:color/transparent"
+            android:drawablePadding="8dp"
+            android:gravity="left|center"
+            android:hint="@string/search"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="@color/background_color"
+            android:textColorHint="@color/text_gray_darkest"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/btn_search"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_search_black_24dp"
+            android:tint="@color/background_color"
+            android:background="@drawable/search_button_dashed_selector"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00aaaa</color>
+    <color name="colorPrimaryDark">#00aaaa</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="background_color">#00aaaa</color>
+    <color name="white">#FFFFFF</color>
+    <color name="off_white">#99ffffff</color>
+    <color name="white_greyish">#EEEEEE</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="transparent_50">#80000000</color>
+    <color name="transparent_100">#00000000</color>
+
+    <color name="action_bar">#ff0d0d0d</color>
+    <color name="button_selectorcolor">#9E9E9E</color>
+
+    <color name="background_black">#000000</color>
+    <color name="background_gray_lightest">#F3F3F9</color>
+    <color name="background_gray_light">#BFBFBF</color>
+    <color name="background_white">#FFFFFF</color>
+    <color name="background_navy">#353556</color>
+    <color name="background_gray">#BDBDBD</color>
+    <color name="background_blue">#202089</color>
+    <color name="background_gray_darkest">#82898D</color>
+    <color name="stroke_blue_lightest">#E8E8F3</color>
+    <color name="selector_black_pressed">#1F000000</color>
+    <color name="text_navy">#353556</color>
+    <color name="text_navy_transparent_50">#80353556</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_gray_darkest">#82898D</color>
+    <color name="text_black">#000000</color>
+    <color name="text_pink">#F21E75</color>
+    <color name="text_blue">#202089</color>
+    <color name="text_blue_lightest">#AAAAFF</color>
+</resources>

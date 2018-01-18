@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.codetail.widget.RevealFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/background_color"
+        android:id="@+id/dialog">
+
+        <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Image Preview"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/text_white"
+            android:gravity="center"
+            android:id="@+id/title"/>
+
+        <ImageView
+            android:layout_width="164dp"
+            android:layout_height="164dp"
+            android:layout_margin="10dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/title"
+            android:id="@+id/imageViewImageToUpload"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewImageToUpload"
+            android:paddingBottom="10dp">
+
+            <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:text="Upload"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:id="@+id/tv_upload_image"/>
+
+            <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="Cancel"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:id="@+id/tv_cancel_upload"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</io.codetail.widget.RevealFrameLayout>

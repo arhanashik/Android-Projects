@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.project.blackspider.musician.activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.andremion.music.MusicCoverView
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:background="@color/transparent_100"
+            android:foreground="#D0000000"
+            android:transitionName="@string/transition_name_cover"/>
+
+        <RelativeLayout
+            android:id="@+id/playlist"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:transitionGroup="true">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/img_icon"
+                android:layout_marginLeft="-18dp"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabIndicatorHeight="2dp"
+                app:tabSelectedTextColor="@color/colorAccent"
+                app:tabTextColor="@color/colorWhite"
+                app:tabMode="scrollable" />
+
+            <ImageView
+                android:id="@+id/img_icon"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:paddingRight="13dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="0dp"
+                app:srcCompat="@drawable/ic_m"
+                android:tint="@android:color/white"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/pane"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_below="@+id/playlist"
+            android:background="@color/colorPane"/>
+
+        <com.project.blackspider.musician.visualizer.VisualizerView
+            android:id="@+id/visualizerView"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_below="@+id/playlist"/>
+
+        <com.project.blackspider.musician.view.CustomRecycler.IndexFastScrollRecyclerView
+            android:id="@+id/tracks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/pane"
+            app:layoutManager="LinearLayoutManager"
+            tools:listitem="@layout/item_audio"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tract_container"
+            android:onClick="onFabClick"
+            android:layout_alignParentBottom="true">
+            <include
+                layout="@layout/area_current_track" />
+        </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/pane"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/fab_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:scaleType="center"
+            android:src="@drawable/ic_headset_white_24dp"
+            android:transitionName="@string/transition_name_fab"
+            app:fabSize="mini"/>
+    </RelativeLayout>
+
+</FrameLayout>

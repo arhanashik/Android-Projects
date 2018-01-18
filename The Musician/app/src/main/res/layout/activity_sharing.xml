@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/content_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/share_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:onClick="shareClick"
+        android:src="@drawable/ic_share_white_24dp"
+        android:transitionName="@string/share_transition_name"
+        app:fabSize="normal"/>
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/design_fab_elevation"
+        android:scaleType="centerInside"
+        android:src="@drawable/sharing_bg"/>
+
+    <TextView
+        android:id="@+id/facebook"
+        style="@style/ShareItemView"
+        android:layout_above="@id/share_button"
+        android:layout_centerHorizontal="true"
+        android:drawableTop="@drawable/ic_facebook_white_24dp"
+        android:elevation="@dimen/design_fab_elevation"
+        android:text="@string/share_facebook"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/share_music"
+        style="@style/ShareItemView"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/share_button"
+        android:drawableTop="@drawable/ic_share_white_24dp"
+        android:elevation="@dimen/design_fab_elevation"
+        android:text="@string/share_music"
+        android:gravity="center"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/share_app"
+        style="@style/ShareItemView"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/share_button"
+        android:drawableTop="@mipmap/ic_launcher"
+        android:elevation="@dimen/design_fab_elevation"
+        android:text="@string/share_app"
+        android:gravity="center"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/whatsapp"
+        style="@style/ShareItemView"
+        android:layout_below="@id/share_button"
+        android:layout_centerHorizontal="true"
+        android:drawableTop="@drawable/ic_whatsapp_white_24dp"
+        android:elevation="@dimen/design_fab_elevation"
+        android:text="@string/share_whatsapp"
+        android:textColor="@android:color/white"/>
+
+</RelativeLayout>

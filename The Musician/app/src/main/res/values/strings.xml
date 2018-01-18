@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Musician</string>
+
+    <string name="transition_name_title" translatable="false">title</string>
+    <string name="transition_name_cover" translatable="false">cover</string>
+    <string name="transition_name_time" translatable="false">time</string>
+    <string name="transition_name_duration" translatable="false">duration</string>
+    <string name="transition_name_progress" translatable="false">progress</string>
+    <string name="transition_name_fab" translatable="false">fab</string>
+    <string name="share_transition_name" translatable="false">share_transition</string>
+    <string name="play_vector_path" translatable="false">M6,5 l12,7 l0,0 l-12,0z M6,12 l12,0 l0,0 l-12,7z</string>
+    <string name="pause_vector_path" translatable="false">M5,6 l14,0 l0,4 l-14,0z M5,14 l14,0 l0,4 l-14,0z</string>
+    <string name="headset_vector_path" translatable="false">M12,1c-4.97,0 -9,4.03 -9,9v7c0,1.66 1.34,3 3,3h3v-8H5v-2c0,-3.87 3.13,-7 7,-7s7,3.13 7,7v2h-4v8h3c1.66,0 3,-1.34 3,-3v-7c0,-4.97 -4.03,-9 -9,-9z</string>
+    <string name="action_play">Play</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_favourite">Add to favourite</string>
+    <string name="action_add_to_playlist">Add to playlist</string>
+    <string name="action_share">Share</string>
+
+    <string name="share_facebook">Facebook</string>
+    <string name="share_whatsapp">WhatsApp</string>
+    <string name="share_shareit">ShareIt</string>
+    <string name="share_bluetooth">Bluetooth</string>
+    <string name="share_app">App</string>
+    <string name="share_music">Music</string>
+
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

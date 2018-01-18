@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "784821865090",
+    "firebase_url": "https://quarrel-chat-6d3c0.firebaseio.com",
+    "project_id": "quarrel-chat-6d3c0",
+    "storage_bucket": "quarrel-chat-6d3c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784821865090:android:abd6f9bef543c87b",
+        "android_client_info": {
+          "package_name": "com.project.blackspider.quarrelchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784821865090-t80sb3ivbb89u4o8l9nsk7vpn47o9kdr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.blackspider.quarrelchat",
+            "certificate_hash": "38f4d43d14f2563b451457894c70d09cb998ac1c"
+          }
+        },
+        {
+          "client_id": "784821865090-3o0gq32spaf4orqgin7nctf3mkqct9i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr8lohb_1x3AcZIAD1zR5Vk58xM5KfcNM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "784821865090-3o0gq32spaf4orqgin7nctf3mkqct9i6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

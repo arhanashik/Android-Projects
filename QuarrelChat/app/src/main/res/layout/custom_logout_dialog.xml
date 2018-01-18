@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.codetail.widget.RevealFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@color/background_white"
+        android:id="@+id/dialog">
+
+        <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+            android:layout_width="250dp"
+            android:layout_height="260dp"
+            android:text="@string/logout_title"
+            android:textSize="20dp"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:id="@+id/tv_logout_title"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#50000000"/>
+
+        <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="15dp"
+            android:gravity="left|center"
+            android:text="Arhan Ashik"
+            android:textColor="@color/text_white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/tv_logout_name"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:background="@color/background_color">
+            <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="2dp"
+                android:layout_marginLeft="5dp"
+                android:text="Yes, log out"
+                android:textColor="@color/text_white"
+                android:textSize="16dp"
+                android:gravity="left"
+                android:id="@+id/tv_confirm_logout"/>
+            <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="2dp"
+                android:layout_marginRight="5dp"
+                android:text="No, cancel"
+                android:textColor="@color/text_white"
+                android:textSize="16dp"
+                android:gravity="right"
+                android:id="@+id/tv_cancel_logout"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</io.codetail.widget.RevealFrameLayout>

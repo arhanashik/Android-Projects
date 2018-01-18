@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "253169244563",
+    "firebase_url": "https://class-schedule-14539.firebaseio.com",
+    "project_id": "class-schedule-14539",
+    "storage_bucket": "class-schedule-14539.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253169244563:android:6cbb9781d1af7301",
+        "android_client_info": {
+          "package_name": "com.project.blackspider.classschedule"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "253169244563-jfmj6r1oq1dujua10s18nroslg6t1c7m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.blackspider.classschedule",
+            "certificate_hash": "38F4D43D14F2563B451457894C70D09CB998AC1C"
+          }
+        },
+        {
+          "client_id": "253169244563-slg0p6db97kbrh5ur27bsgqp65kgeksu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBpMXFfA5WfvYmYXeCacym7QfznLyQ_Mc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "253169244563-slg0p6db97kbrh5ur27bsgqp65kgeksu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

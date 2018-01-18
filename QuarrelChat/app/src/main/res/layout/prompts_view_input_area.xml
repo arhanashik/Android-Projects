@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.codetail.widget.RevealFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_white"
+        android:id="@+id/dialog">
+        <EditText
+            android:id="@+id/input1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:maxLines="1"
+            android:background="@drawable/shape_rectangle_dashed_border"
+            android:hint="Enter 1st input"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="@color/background_color"
+            android:textColorHint="@color/text_gray_darkest"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/input2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:maxLines="1"
+            android:background="@drawable/shape_rectangle_dashed_border"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@color/background_color"
+            android:textColorHint="@color/text_gray_darkest"
+            android:textSize="16sp"
+            android:layout_below="@+id/input1"
+            android:hint="Enter 2nd input"/>
+
+        <EditText
+            android:id="@+id/input3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:maxLines="1"
+            android:background="@drawable/shape_rectangle_dashed_border"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@color/background_color"
+            android:textColorHint="@color/text_gray_darkest"
+            android:textSize="16sp"
+            android:layout_below="@+id/input2"
+            android:hint="Enter 3rd input"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/input3"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:background="@color/background_color">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                app:srcCompat="@drawable/ic_confirm_black_24dp"
+                android:tint="@color/background_white"
+                android:id="@+id/img_confirm"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                app:srcCompat="@drawable/ic_close_black_24dp"
+                android:tint="@color/background_white"
+                android:id="@+id/img_close"/>
+        </LinearLayout>
+    </RelativeLayout>
+</io.codetail.widget.RevealFrameLayout>

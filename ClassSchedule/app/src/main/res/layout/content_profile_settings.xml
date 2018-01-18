@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cccccc"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:activity="com.project.blackspider.classschedule.Activities.ProfileSettingsActivity"
+    tools:showIn="@layout/activity_profile_settings">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#cccccc">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/background1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ALL INFO"
+                android:textStyle="bold"
+                android:textSize="19dp"
+                android:textColor="@color/colorPrimary"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textStyle="normal"
+                android:textSize="17dp"
+                android:padding="8dp"
+                android:id="@+id/textViewUserName"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ID"
+                android:textStyle="normal"
+                android:textSize="17dp"
+                android:padding="8dp"
+                android:id="@+id/textViewUserID"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reg"
+                android:textStyle="normal"
+                android:textSize="17dp"
+                android:padding="8dp"
+                android:id="@+id/textViewUserReg"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Faculty"
+                android:textStyle="normal"
+                android:textSize="17dp"
+                android:padding="8dp"
+                android:id="@+id/textViewUserFaculty"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Session"
+                android:textStyle="normal"
+                android:textSize="17dp"
+                android:padding="8dp"
+                android:id="@+id/textViewUserSession"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CONTACT INFO"
+                android:textStyle="bold"
+                android:textSize="19dp"
+                android:textColor="@color/colorPrimary"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textStyle="normal"
+                android:textSize="17dp"
+                android:padding="8dp"
+                android:id="@+id/textViewUserPhone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textStyle="normal"
+                android:textSize="17dp"
+                android:padding="8dp"
+                android:id="@+id/textViewUserEmail"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="STATUS"
+                android:textStyle="bold"
+                android:textSize="19dp"
+                android:textColor="@color/colorPrimary"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textStyle="normal"
+                android:textSize="17dp"
+                android:padding="8dp"
+                android:id="@+id/textViewUserStatus"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OPTIONS"
+                android:textStyle="bold"
+                android:textSize="19dp"
+                android:textColor="@color/colorPrimary"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change name"
+                android:textSize="17dp"
+                android:padding="6dp"
+                android:id="@+id/textViewChangeNameOption"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change password"
+                android:textStyle="normal"
+                android:textSize="17dp"
+                android:padding="6dp"
+                android:id="@+id/textViewChangePasswordOption"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change phone number"
+                android:textSize="17dp"
+                android:padding="6dp"
+                android:id="@+id/textViewChangePhoneNumberOption"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change profile image"
+                android:textSize="17dp"
+                android:padding="6dp"
+                android:id="@+id/textViewChangeProfileImageOption"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change status"
+                android:textSize="17dp"
+                android:padding="6dp"
+                android:id="@+id/textViewChangeStatusOption"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background1"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:text="Delete  My  Account"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="@android:color/holo_red_dark"
+                android:id="@+id/buttonDeleteAccount"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

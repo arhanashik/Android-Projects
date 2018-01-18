@@ -1,0 +1,43 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:activity="com.project.blackspider.classschedule.Activities.MainActivity">
+
+    <item
+        android:id="@+id/action_add_post"
+        android:orderInCategory="100"
+        android:title="@string/action_add_post"
+        android:icon="@drawable/icon_add_post"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_refresh_main_menu"
+        android:orderInCategory="100"
+        android:title="@string/action_refresh"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_share_files"
+        android:orderInCategory="100"
+        android:title="@string/action_share_files"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_broadcast"
+        android:orderInCategory="100"
+        android:title="@string/action_broadcast"
+        android:visible="true"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_sign_out"
+        android:orderInCategory="100"
+        android:title="@string/action_sign_out"
+        app:showAsAction="never" />
+</menu>

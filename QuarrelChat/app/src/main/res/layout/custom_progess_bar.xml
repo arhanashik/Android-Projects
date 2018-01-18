@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="170dp"
+    android:layout_height="200dp"
+    android:layout_gravity="center"
+    android:background="@drawable/progress_bar_bg">
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:src="@drawable/mouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mouse"/>
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:src="@drawable/cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cat"/>
+
+        <ImageView
+            android:layout_marginLeft="3.5dp"
+            android:layout_marginTop="12.5dp"
+            android:src="@drawable/eyes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eye_left"/>
+
+        <com.project.blackspider.quarrelchat.CustomView.EyelidView
+            android:layout_marginLeft="3.5dp"
+            android:layout_marginTop="12.5dp"
+            android:src="@drawable/eyes"
+            android:layout_width="24dp"
+            android:layout_height="15dp"
+            android:id="@+id/eyelid_left"/>
+
+        <ImageView
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="12.5dp"
+            android:src="@drawable/eyes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eye_right"/>
+
+        <com.project.blackspider.quarrelchat.CustomView.EyelidView
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="12.5dp"
+            android:src="@drawable/eyes"
+            android:layout_width="24dp"
+            android:layout_height="15dp"
+            android:id="@+id/eyelid_right"/>
+    </RelativeLayout>
+
+    <com.project.blackspider.quarrelchat.CustomView.GraduallyTextView
+        android:id="@+id/graduallyTextView"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:layout_below="@+id/mouse"
+        android:textColor="#ffffff"
+        android:text="L O A D I N G . . ."
+        android:gravity="center"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

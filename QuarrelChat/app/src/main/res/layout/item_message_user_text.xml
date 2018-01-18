@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="@dimen/message_bubble_margin_top">
+
+    <FrameLayout
+        android:id="@+id/fl_user_img_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/shape_oval_bg">
+
+        <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+            android:id="@+id/tv_user_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:maxLines="1"
+            android:gravity="center"
+            android:background="@drawable/shape_oval_bg"
+            android:textAllCaps="true"
+            android:textColor="@color/text_white"
+            android:textSize="22sp"
+            android:text="JF"/>
+
+        <ImageView
+            android:id="@+id/imgV_user_img"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="fitCenter" >
+        </ImageView>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imgV_user_img_carrot"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_toRightOf="@+id/fram_user_msg_bubble"
+        android:layout_alignTop="@+id/fram_user_msg_bubble"
+        android:layout_marginLeft="-4dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/vd_ic_user_carrot"
+        android:tint="@color/background_color"/>
+
+    <FrameLayout
+        android:id="@+id/fram_user_msg_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/fl_user_img_container"
+        android:background="@drawable/shape_rounded_rectangle_bg"
+        android:padding="10dp">
+
+        <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+            android:id="@+id/tv_user_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:gravity="left"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="In need of pizza. Can you help?"/>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/img_user_msg_report"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_below="@+id/fram_user_msg_bubble"
+        android:layout_toLeftOf="@+id/tv_user_msg_timestamp"
+        android:layout_marginBottom="@dimen/message_timestamp_margin_bottom"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="right"
+        app:srcCompat="@drawable/ic_sending_black_24dp"/>
+
+
+    <com.project.blackspider.quarrelchat.CustomView.SimpleLoveTextView
+        android:id="@+id/tv_user_msg_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/fram_user_msg_bubble"
+        android:layout_below="@+id/fram_user_msg_bubble"
+        android:layout_marginBottom="@dimen/message_timestamp_margin_bottom"
+        android:layout_marginTop="@dimen/message_timestamp_margin_top"
+        android:gravity="right"
+        android:maxLines="1"
+        android:textColor="@color/text_gray_darkest"
+        android:textSize="10sp"
+        tools:text="12:29pm" />
+</RelativeLayout>

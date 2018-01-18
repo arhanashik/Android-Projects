@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:activity="com.project.blackspider.classschedule.Activities.SingleChatActivity">
+
+    <item
+        android:id="@+id/action_call"
+        android:orderInCategory="100"
+        android:title="@string/action_call"
+        android:icon="@drawable/icon_call"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_refresh_main_menu"
+        android:orderInCategory="100"
+        android:title="@string/action_block"
+        android:icon="@drawable/icon_refresh2" />
+</menu>

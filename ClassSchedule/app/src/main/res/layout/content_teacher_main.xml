@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_teacher_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:activity="com.project.blackspider.classschedule.Teacher.TeacherMainActivity"
+    tools:showIn="@layout/activity_teacher_main"
+    android:background="#fff">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/circle"
+        android:id="@+id/spinnerView">
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:prompt="@string/session_selection_spinner_title"
+            android:id="@+id/sessionSelectionSpinner1"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/spinnerView"
+        android:gravity="center"
+        android:text="No Sessions Selected"
+        android:textSize="18sp"
+        android:visibility="visible"
+        android:id="@+id/textViewNoSessionFound"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/spinnerView"
+        android:visibility="gone"
+        android:id="@+id/listViewTeacherMainActivity"
+        android:dividerHeight="0dp"
+        android:divider="#fff">
+
+    </ListView>
+
+</RelativeLayout>
